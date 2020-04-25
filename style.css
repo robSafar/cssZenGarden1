@@ -1,0 +1,48 @@
+/* Typography */
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-feature-settings: "salt" 1;
+	line-height: 1.4rem;
+}
+
+p { 
+	font-weight: 400; 
+}
+
+h1, h2, h3 {
+	padding-top: 1rem;
+}
+
+/* Layout */
+
+/*@media(min-width:500px){
+	div.page-wrapper {
+		display: flex;
+	}
+}*/
+
+section.intro, div.main, aside.sidebar {
+	border: 1px dashed;
+	padding: 1rem;
+	max-width: 75ch;
+	margin: 0 auto;
+}
+
+section.intro header, section.intro > div {
+	border: 1px solid;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+div.main > div, div.main footer {
+	border: 1px solid;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+aside.sidebar .wrapper > div {
+	border: 1px solid;
+	margin: 1rem;
+	padding: 1rem;
+}
