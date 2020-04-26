@@ -1,7 +1,7 @@
 /* Typography */
 
 body {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Inter', sans-serif;
 	font-feature-settings: "salt" 1;
 	line-height: 1.4rem;
 }
@@ -14,13 +14,37 @@ h1, h2, h3 {
 	padding-top: 1rem;
 }
 
+section.intro header h1 {
+	font-size: 2.5rem;
+	line-height: 1em;
+	font-weight: 100;
+}
+section.intro header h2 {
+	font-size: 3rem;
+	line-height: 1em;
+	font-weight: 800;
+}
+section.intro h3, div.main h3 {
+	font-size: 1.8rem;
+	line-height: 1.2em;
+	font-weight: 500;
+}
+
 /* Layout */
 
-/*@media(min-width:500px){
-	div.page-wrapper {
-		display: flex;
-	}
-}*/
+div.page-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+section.intro {
+	min-height: 100vh;
+}
+aside.sidebar div.wrapper {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+}
 
 section.intro, div.main, aside.sidebar {
 	border: 1px dashed;
@@ -45,4 +69,13 @@ aside.sidebar .wrapper > div {
 	border: 1px solid;
 	margin: 1rem;
 	padding: 1rem;
+}
+
+@media(min-width:750px){
+	div.page-wrapper {
+		grid-template-columns: minmax(50vw,auto) auto;
+	}
+	section.intro {
+		grid-column: 1/3;
+	}
 }
