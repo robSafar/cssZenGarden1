@@ -1,17 +1,22 @@
 /* Typography */
 
+@import url('https://rsms.me/inter/inter.css');
+body { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  body { font-family: 'Inter var', sans-serif; }
+}
+
 body {
-	font-family: 'Inter', sans-serif;
 	font-feature-settings: "salt" 1;
 	line-height: 1.4rem;
+	color: #222;
 }
 
 p { 
 	font-weight: 400; 
 }
-
-h1, h2, h3 {
-	padding-top: 1rem;
+a, a:visited, a:hover {
+	color: #222;
 }
 
 section.intro header h1 {
@@ -27,7 +32,7 @@ section.intro header h2 {
 section.intro h3, div.main h3 {
 	font-size: 1.8rem;
 	line-height: 1.2em;
-	font-weight: 500;
+	font-weight: 700;
 }
 
 /* Layout */
@@ -37,38 +42,27 @@ div.page-wrapper {
 	grid-template-columns: 1fr;
 }
 
-section.intro {
-	min-height: 100vh;
-}
 aside.sidebar div.wrapper {
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
 }
 
-section.intro, div.main, aside.sidebar {
-	border: 1px dashed;
+section.intro > header {
+	text-align: center;
+	margin: 2rem;
+}
+
+div.summary, div.preamble, div.main, aside.sidebar {
 	padding: 1rem;
 	max-width: 75ch;
-	margin: 0 auto;
+	margin: 1rem auto;
 }
 
-section.intro header, section.intro > div {
-	border: 1px solid;
-	margin: 1rem;
+section.intro > div, div.main > div, div.main footer, aside.sidebar .wrapper > div {
+	margin: 1rem auto;
 	padding: 1rem;
-}
-
-div.main > div, div.main footer {
-	border: 1px solid;
-	margin: 1rem;
-	padding: 1rem;
-}
-
-aside.sidebar .wrapper > div {
-	border: 1px solid;
-	margin: 1rem;
-	padding: 1rem;
+	background-color: #f9f9f9;
 }
 
 @media(min-width:750px){
